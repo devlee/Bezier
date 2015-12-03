@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+.container {
+  margin: 0 -15px;
+  padding: 0 30px;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+canvas {
+  margin: 50px;
+}
+canvas.star {
+  background-color: #17713b;
+}
+canvas.bezier {
+  background-color: #fff;
+}

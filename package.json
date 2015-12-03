@@ -1,0 +1,18 @@
+{
+  "name": "Bezier",
+  "description": "Canvas",
+  "version": "0.0.1",
+  "private": false,
+  "author": "https://github.com/devlee/Bezier/graphs/contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devlee/Bezier.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-stylus": "^2.1.0"
+  }
+}
