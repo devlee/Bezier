@@ -127,6 +127,24 @@ var bezier = {
 	}
 };
 
+var autoRun = function (ctx, bctx, pList, bc) {
+	var a = location.href.split("#");
+	if (a.length == 2) {
+		var p = a[1];
+		if (/\d{1,3},\d{1,3}/g.test(p)) {
+			var pl = p.split(",");
+			for (var i = 0, len = pl.length; i < len - 1; i ++) {
+				var point = new Point(pl[i]*1, pl[i+1]*1);
+				pList.push(point);
+				i ++;
+			}
+			if (pList.length > 1) {
+				bezier.start(ctx, bctx, pList, bc);
+			}
+		}
+	}
+};
+
 var init = function () {
 	var c = document.getElementById('bezierCanvas');
 	var ctx = c.getContext('2d');
@@ -146,6 +164,9 @@ var init = function () {
 		bezier.stop(ctx, bctx, bc);
 		pList = [];
 	});
+
+	//400,600,100,400,300,200,500,400,375,475,400,375,425,475,300,400,500,200,700,400,400,600
+	autoRun(ctx, bctx, pList, bc);
 
 };
 
