@@ -74,11 +74,11 @@ var doDraw = function (pList, ctx, percent) {
 		var l1 = lList[i + 1];
 		l0.draw(ctx);
 		l0.moveLinePoint(percent);
-		nextPList.push(l0.linePoint);alert(1);
+		nextPList.push(l0.linePoint);
 		if (i == len - 2) {
 			l1.draw(ctx);
 			l1.moveLinePoint(percent);
-			nextPList.push(l1.linePoint);alert("len:"+nextPList.length);
+			nextPList.push(l1.linePoint);
 		}
 	}
 	if (nextPList.length > 1) {
