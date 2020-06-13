@@ -128,7 +128,13 @@ var bezier = {
 };
 
 var autoRun = function (ctx, bctx, pList, bc) {
-	var a = location.href.split("#");
+	var href = location.href;
+	var a = [];
+	if (href.indexOf('#') > -1) {
+		a = location.href.split("#");
+	} else if (href.indexOf('?') > -1) {
+		a = location.href.split("?");
+	}
 	if (a.length == 2) {
 		var p = a[1];
 		if (/\d{1,3},\d{1,3}/g.test(p)) {
